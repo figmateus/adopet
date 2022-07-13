@@ -52,6 +52,6 @@ php artisan serve
 ```
 **Provavelmente você vera a tela inicial do sistema**
 
-<img style="width:400px; height: 200px" src="./preview/adopet.png">
+<img  src="./preview/adopet.png">
 
 
