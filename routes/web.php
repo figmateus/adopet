@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\{UserController,PetController, PetOwnerController};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,14 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('hero');
 });
-Route::get('/user',[UserController::class, 'index']);
+Route::prefix('pet')->group(function(){
+    Route::get('/index',[PetController::class, 'index'])->name('pet.index');
+    Route::get('/cadastro',[PetOwnerController::class,'register'])->name('pet.register');
+});
+//Route::get('/pet/show/{id}',[PetController::class, 'show'])->name('pet.show');
+Route::get('/cadastro',[UserController::class, 'register'])->name('user.register');
+Route::post('/cadastro',[UserController::class, 'store'])->name('user.store');
+
+
