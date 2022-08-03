@@ -28,4 +28,11 @@ class UserController extends Controller
         $this->repository->create($user);
         return redirect()->route('pet.index');
     }
+
+    public function edit($id):View
+    {
+        $user = User::find($id);
+        $states = config('states');
+        return view('user.edit', compact('states', 'user'));
+    }
 }

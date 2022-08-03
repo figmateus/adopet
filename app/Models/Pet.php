@@ -10,10 +10,14 @@ class Pet extends Model
 {
     use HasFactory;
 
+    protected $table = 'pet';
     protected $fillable = [
+        'pet_owner_id',
         'image',
+        'status',
         'name',
         'age',
+        'gender',
         'personality'
     ];
 

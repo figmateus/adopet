@@ -15,7 +15,7 @@
               <a href="{{route('user.register')}}" class="w-full flex items-center justify-center  px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"> Quero Adotar </a>
             </div>
             <div class="p-1 rounded-md shadow">
-              <a href="{{route('pet.register')}}" class="w-full flex items-center justify-center px-8 pl-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">Quero Cadastrar um Pet </a>
+              <a href="{{route('owner.register')}}" class="w-full flex items-center justify-center px-8 pl-2 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">Quero Cadastrar um Pet </a>
             </div>
           </div>
           <div class="lg:absolute lg:inset-y-1 lg:right-10 lg:top-32 lg:pl-36 lg:w-1/1 lg:h-1/2 md:h-full md:flex md:justify-center xl:h-auto xl:w-1/2 xl:pb-60">

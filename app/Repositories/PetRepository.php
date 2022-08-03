@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Pet;
+
 class PetRepository
 {
     private $model;
@@ -11,6 +12,5 @@ class PetRepository
     {
         $this->model = new Pet();
     }
-
 
 }

@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'owners' => [
+            'driver' => 'session',
+            'provider' => 'petOwner',
+        ],
     ],
 
     /*
@@ -65,10 +70,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'petOwner' => [
+            'driver' => 'eloquent',
+            'model' => \App\Models\PetOwner::class,
+        ],
     ],
 
     /*

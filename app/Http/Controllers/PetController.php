@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -12,4 +11,10 @@ class PetController extends Controller
     {
         return view('pet.index');
     }
+
+    public function register():View
+    {
+        return view('pet.register');
+    }
+
 }

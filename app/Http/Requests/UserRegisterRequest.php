@@ -24,8 +24,8 @@ class UserRegisterRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'name'=> 'required|string|max:50|min:3', 
-            'email'=>'required|email|unique:users,email,{$id},id',
+            'name'=> 'required|string|max:50|min:3',
+            'email'=>'required|email|unique:users,email,{$id},id|unique:pet_owners,email,{$id},id',
             'phone'=>'required|numeric|min:11',
             'street'=>'required|string',
             'neighbor' => 'required|string|min:4',
@@ -39,7 +39,7 @@ class UserRegisterRequest extends FormRequest
 
         if($this->method('PUT')){
             $rules = [
-                'name'=> 'nullable|string|max:50|min:3', 
+                'name'=> 'nullable|string|max:50|min:3',
                 'email'=> 'nullable|email',
                 'phone'=>'nullable|numeric|min:11',
                 'street'=>'nullable|string',
