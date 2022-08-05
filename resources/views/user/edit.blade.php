@@ -14,13 +14,13 @@
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3 mb-6 md:mb-0">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
-                  Nome 
+                  Nome
                 </label>
                 <input name="name" value="{{$user->name}}" class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded md:py-2 py-3 px-4 mb-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" type="text">
               </div>
             </div>
-            <div class="flex flex-wrap -mx-3 mb-6"> 
-                <div class="w-full md:w-1/2 px-3 md:pt-0">  
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 md:pt-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
                       Email
                     </label>
@@ -33,7 +33,7 @@
                     <input name="password" class="appearance-none block w-full bg-gray-200 text-gray-700 border md:py-2 border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="password" type="password">
                 </div>
             </div>
-            <div class="flex flex-wrap -mx-3 mb-6"> 
+            <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/3 px-3">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cpf">
                       CPF
@@ -48,7 +48,7 @@
                 </div>
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cep">
-                      Cep 
+                      Cep
                     </label>
                     <input name="cep" value="{{$user->cep}}" class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded md:py-2 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="cep" type="text">
                 </div>
@@ -56,7 +56,7 @@
             <div class="flex flex-wrap -mx-3 mb-2">
                 <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                   <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="street">
-                    Endereço 
+                    Endereço
                   </label>
                   <input name="street" value="{{$user->street}}" class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded md:py-2 py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="street" type="text">
                 </div>
@@ -85,10 +85,10 @@
                   Estado
                 </label>
                 <div class="relative">
-                  <select name="state" class="block appearance-none w-full md:py-2 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="state"> 
-                  @foreach ($states as $key => $state)    
-                  <option @if($state == $user->state) selected @endif value="{{$state}}">{{$key}}</option>   
-                  @endforeach  
+                  <select name="state" class="block appearance-none w-full md:py-2 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="state">
+                  @foreach ($states as $key => $state)
+                  <option @if($state == $user->state) selected @endif value="{{$state}}">{{$key}}</option>
+                  @endforeach
                   </select>
                   <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -104,7 +104,7 @@
             </div>
             <div class="flex flex-wrap -mx-3 pl-3 pt-3">
                 <button class="bg-blue-500 hover:bg-blue-700 md:py-2 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                  Registrar
+                  Editar
                 </button>
               </div>
           </form>

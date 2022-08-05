@@ -42,6 +42,9 @@ $user =  Auth::user() ? Auth::user() : Auth::guard('owners')->user();
                     <a href="{{route('owner.index')}}" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Pets Cadastrados</a>
                 </div>
                   <div class="mr-2">
+                      <a href="{{route('owner.interested')}}" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Pessoas Interessadas</a>
+                  </div>
+                  <div class="mr-2">
                       <a href="#" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Meus Dados</a>
                   </div>
                 <div>

@@ -19,10 +19,10 @@
             <table class="w-1/4 flex flex-col items-center md:h-1/4 md:pt-2 lg:pt-32">
                 <thead class="border-b bg-indigo-600">
                 <tr>
-                    <th scope="col" class="text-sm font-medium text-white pl-6 py-4">
+                    <th scope="col" class="text-sm font-medium text-white pl-20 py-4">
                         Foto
                     </th>
-                    <th scope="col" class="text-sm font-medium text-white pl-40 py-4">
+                    <th scope="col" class="text-sm font-medium text-white pl-16 py-4">
                         Status
                     </th>
                     <th scope="col" class="text-sm font-medium text-white pl-16 py-4">
@@ -37,6 +37,9 @@
                     <th scope="col" class="text-sm font-medium text-white pl-24 py-4">
                         Genero
                     </th>
+                    <th scope="col" class="text-sm font-medium text-white pl-24 py-4">
+                        Pessoas Interessadas
+                    </th>
                     <th scope="col" class="text-sm font-medium text-white px-32 py-4">
                         Ações
                     </th>
@@ -47,26 +50,29 @@
 {{--                    {{dd($petOwner->pets[1]->image)}}--}}
                 <tr class="bg-white border-b">
                     @if($pet->image)
-                        <td><img src=" {{ asset('storage/'.$pet->image) }}" width="50px" height="50px" class="rounded-full"/></td>
+                        <td class="pl-6"><img src=" {{ asset('storage/'.$pet->image) }}" width="50px" height="50px" class="rounded"/></td>
                     @else
-                        <td><img src="public/avatar.png" width="50px" alt="" height="50px" class="rounded-full"/></td>
+                        <td class="pl-6"><img src="{{asset('storage/avatar.png')}}" width="50px" alt="" height="50px" class="rounded"/></td>
                     @endif
-                    <td class="text-sm text-gray-900 font-light pl-32 py-2 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light pl-20  py-2 whitespace-nowrap">
                         <button class="rounded-full p-1 bg-green-300">{{$pet->status}}</button>
                     </td>
-                    <td class="text-sm text-gray-900 font-light pl-16 py-2 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light pl-14 py-2 whitespace-nowrap">
                         {{$pet->name}}
                     </td>
                     <td class="text-sm text-gray-900 font-light pl-24 py-2 whitespace-nowrap">
                         {{$pet->age}}
                     </td>
-                    <td class="text-sm text-gray-900 font-light px-24 py-2 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light pl-24 py-2 whitespace-nowrap">
                         {{$pet->personality}}
                     </td>
-                    <td class="text-sm text-gray-900 font-light pl-16 py-2 whitespace-nowrap">
+                    <td class="text-sm text-gray-900 font-light pl-36 py-2 whitespace-nowrap">
                         {{$pet->gender}}
                     </td>
-                    <td class="text-sm flex text-gray-900 font-light pl-28 py-2">
+                        <td class="text-sm text-gray-900 font-light pl-36 py-2 whitespace-nowrap">
+                            1
+                        </td>
+                    <td class="text-sm flex text-gray-900 font-light pl-36 py-2">
                         <div class="mr-2">
                             <a href="{{route('owner.petEdit',['id' => $pet->id])}}" class="inline-flex items-center border-0 py-1 px-3 focus:outline-none bg-indigo-300 hover:bg-indigo-400 rounded text-base mt-4 md:mt-0">Editar</a>
                         </div>
@@ -84,5 +90,4 @@
             </table>
         </div>
     </div>
-
 @endsection

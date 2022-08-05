@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PetFormRequest;
+use App\Models\Interested;
 use App\Models\Pet;
 use App\Models\PetOwner;
 use App\Repositories\PetOwnerRepository;
@@ -57,6 +58,20 @@ class PetOwnerController extends Controller
         $response = $this->repository->createPet($pet);
         return redirect()->route('owner.index');
     }
+
+    public function interested():View
+    {
+        $interested = Interested::with('user', 'pet')->get();
+        return view('owner.interested', compact('interested'));
+    }
+
+    public function deleteInterested(int $id):RedirectResponse
+    {
+        Interested::find($id)->delete();
+        $interested = Interested::with('user', 'pet')->get();
+        return redirect()->route('owner.interested', compact('interested'))->with('success', 'Deletado Com Sucesso!');
+    }
+
     public function petEdit(int $id):View
     {
         $pet = Pet::find($id);

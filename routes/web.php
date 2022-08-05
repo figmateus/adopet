@@ -22,14 +22,18 @@ Route::get('/logoff', [LoginController::class, 'logoff'])->name('logoff');
 
 Route::prefix('pet')->group(function(){
     Route::get('/',[PetController::class, 'index'])->name('pet.index');
-    Route::get('/cadastro',[PetController::class,'register'])->name('pet.register');
-    Route::post('/cadastro',[PetController::class,'store']);
+    Route::get('/detalhes/{id}',[PetController::class, 'show'])->name('pet.show');
+    Route::get('/adopt/pet/{petId}/user/{userId}',[PetController::class, 'adopt'])->name('pet.adopt');
+//    Route::get('/cadastro',[PetController::class,'register'])->name('pet.register');
+//    Route::post('/cadastro',[PetController::class,'store']);
 });
 
-Route::prefix('owner')->group(function (){
+Route::prefix('owner')->group(function(){
     Route::get('/lista',[PetOwnerController::class, 'index'])->name('owner.index');
     Route::get('/cadastroPet',[PetOwnerController::class,'petRegister'])->name('owner.PetRegister');
     Route::post('/cadastroPet',[PetOwnerController::class,'petStore'])->name('owner.PetStore');
+    Route::get('/interessados', [PetOwnerController::class, 'interested'])->name('owner.interested');
+    Route::delete('/interessados/{id}', [PetOwnerController::class, 'deleteInterested'])->name('owner.Deleteinterested');
     Route::get('/cadastro',[PetOwnerController::class,'register'])->name('owner.register');
     Route::post('/cadastro',[PetOwnerController::class,'store']);
     Route::get('/editPet/{id}',[PetOwnerController::class,'petEdit'])->name('owner.petEdit');
