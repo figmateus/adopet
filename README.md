@@ -45,6 +45,12 @@ php artisan key:generate
 ```
 npm install
 ```
+
+**link o storage**
+```
+php artisan storage:link
+```
+
 **inicie o server e o vite** 
 ```
 npm run dev
